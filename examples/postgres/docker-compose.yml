@@ -1,7 +1,7 @@
 version: "3"
 
 services:
-  jira:
+  confluence:
     image: eugenmayer/confluence
     ports:
       - '80:8090'
@@ -19,7 +19,7 @@ services:
     volumes:
       - confluencedata:/var/atlassian/confluence
   db:
-    image: postegres:9.4
+    image: postegres:9.6
     environment:
       - POSTGRES_USER=confluencedb
       - POSTGRES_PASSWORD=jellyfish
